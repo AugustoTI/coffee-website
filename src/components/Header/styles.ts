@@ -25,7 +25,7 @@ const handleChangeBackground = (active: boolean) => {
   }
 
   return css`
-    background: #000;
+    background: #101010;
   `
 }
 
