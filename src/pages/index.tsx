@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
-import * as S from './styles'
+import { Specialty } from '../components/Specialty'
+import * as S from '../styles/home'
 
 const Home: NextPage = () => {
   return (
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         </S.HomeContainer>
         <img src="/home.png" alt="" />
       </S.Wrapper>
+      <Specialty />
     </>
   )
 }
