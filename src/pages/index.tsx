@@ -1,10 +1,14 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import { Specialty } from '../components/Specialty'
 import * as S from '../styles/home'
 
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Coffee | Home</title>
+      </Head>
       <S.Wrapper className="grid">
         <S.HomeContainer>
           <S.HomeContent className="container">

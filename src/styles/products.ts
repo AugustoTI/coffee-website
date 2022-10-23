@@ -19,6 +19,10 @@ export const ProductsFilters = styled.ul`
       position: relative;
       cursor: pointer;
 
+      &.active h3 {
+        color: var(--title-color);
+      }
+
       h3 {
         font-size: var(--h3-font-size);
         color: var(--text-color);
