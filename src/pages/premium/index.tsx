@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import { BiRightArrowAlt } from 'react-icons/bi'
 import Head from 'next/head'
 import * as S from '../../styles/premium'
+import { Logos } from '../../components/Logos'
 
 const Premium: NextPage = () => {
   return (
@@ -39,6 +40,7 @@ const Premium: NextPage = () => {
           </S.PremiumContent>
         </S.PremiumContainer>
       </S.Wrapper>
+      <Logos />
     </>
   )
 }
