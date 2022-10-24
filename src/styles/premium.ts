@@ -1,11 +1,54 @@
 import styled, { css, keyframes } from 'styled-components'
 
 export const Wrapper = styled.section`
-  ${() => css``}
-`
+  ${() => css`
+    @media screen and (max-width: 320px) {
+      ${PremiumImages} .image_small {
+        transform: translateX(-6rem);
+      }
 
-export const PremiumContainer = styled.div`
-  ${() => css``}
+      ${PremiumButtons} {
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+    }
+
+    @media screen and (min-width: 767px) {
+      ${PremiumContent} {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+    }
+
+    @media screen and (min-width: 1072px) {
+      ${PremiumContent} {
+        column-gap: 6rem;
+      }
+
+      ${PremiumImages} {
+        margin-top: 2rem;
+
+        .image_big {
+          width: 428px;
+        }
+
+        .image_small {
+          width: 153px;
+          transform: translateX(-7rem);
+        }
+      }
+
+      ${PremiumData} {
+        h1 {
+          margin-bottom: 1.5rem;
+        }
+
+        span {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  `}
 `
 
 export const PremiumContent = styled.div`

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { LinkElement } from '../LinkActive/styles'
 
 interface HeaderContainerProps {
   backgroundActive: boolean
@@ -38,6 +39,41 @@ export const Container = styled.header<HeaderContainerProps>`
     z-index: var(--z-fixed);
     transition: background 0.2s;
     ${handleChangeBackground(backgroundActive)}
+
+    @media screen and (min-width: 767px) {
+      ${HeaderNav} {
+        height: calc(var(--header-height) + 1.5rem);
+      }
+
+      ${HeaderButtonClose}, ${HeaderButtonOpen} {
+        display: none;
+      }
+
+      ${HeaderNavMenu} ul {
+        flex-direction: row;
+        padding-top: 0;
+        column-gap: 4rem;
+      }
+
+      ${LinkElement} {
+        position: relative;
+        font-size: var(--normal-font-size);
+        text-transform: initial;
+        color: ${backgroundActive && 'var(--text-color)'};
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 12px;
+          background: var(--text-color-light);
+          transform: translateX(1.25rem);
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+      }
+    }
   `}
 `
 

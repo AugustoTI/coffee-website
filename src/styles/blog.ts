@@ -1,7 +1,26 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.section`
-  ${() => css``}
+  ${() => css`
+    @media screen and (min-width: 576px) {
+      ${BlogContent} {
+        grid-template-columns: 450px;
+        justify-content: center;
+      }
+    }
+
+    @media screen and (min-width: 1072px) {
+      ${BlogContainer} {
+        padding-bottom: 5rem;
+      }
+
+      ${BlogContent} {
+        grid-template-columns: repeat(2, 450px);
+        padding-top: 2rem;
+        column-gap: 5rem;
+      }
+    }
+  `}
 `
 
 export const BlogContainer = styled.div`

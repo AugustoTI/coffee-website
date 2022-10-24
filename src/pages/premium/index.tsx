@@ -11,7 +11,7 @@ const Premium: NextPage = () => {
         <title>Coffee | Premium</title>
       </Head>
       <S.Wrapper className="section">
-        <S.PremiumContainer className="container">
+        <div className="container">
           <h2 className="section_title">
             We offer a premium and better quality preparation just for you!
           </h2>
@@ -38,7 +38,7 @@ const Premium: NextPage = () => {
               </S.PremiumButtons>
             </S.PremiumData>
           </S.PremiumContent>
-        </S.PremiumContainer>
+        </div>
       </S.Wrapper>
       <Logos />
     </>

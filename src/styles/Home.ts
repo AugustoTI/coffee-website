@@ -5,6 +5,44 @@ export const Wrapper = styled.section`
     && {
       gap: 0;
     }
+
+    @media screen and (max-width: 320px) {
+      ${HomeContent} {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+
+    @media screen and (min-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+    }
+
+    @media screen and (min-width: 1040px) {
+      ${HomeContent} {
+        max-width: 400px;
+        margin-right: 7rem;
+        margin-left: auto;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      ${HomeContainer} {
+        padding-top: 10rem;
+      }
+
+      ${HomeData} {
+        padding-top: 3rem;
+      }
+
+      ${HomeContent} > h1 {
+        margin-bottom: 2rem;
+      }
+
+      ${HomeContent} > p {
+        margin-bottom: 3rem;
+      }
+    }
   `}
 `
 

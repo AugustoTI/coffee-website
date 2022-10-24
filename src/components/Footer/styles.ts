@@ -4,6 +4,47 @@ export const Wrapper = styled.footer`
   ${() => css`
     background: var(--black-color);
     padding: 4.5rem 0 2.5rem;
+
+    @media screen and (min-width: 576px) {
+      ${FooterNewsletter} {
+        width: 350px;
+      }
+    }
+
+    @media screen and (min-width: 767px) {
+      ${FooterContent} {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+    }
+
+    @media screen and (min-width: 1072px) {
+      ${FooterContent} {
+        grid-template-columns: repeat(4, max-content);
+        column-gap: 4rem;
+        padding-bottom: 5.5rem;
+      }
+
+      ${FooterGroup} {
+        margin-top: 3rem;
+        justify-content: space-between;
+        flex-direction: row;
+
+        ul {
+          column-gap: 2rem;
+
+          a {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      ${FooterContainer} {
+        h1 {
+          font-size: var(--h2-font-size);
+        }
+      }
+    }
   `}
 `
 

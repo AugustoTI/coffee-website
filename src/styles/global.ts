@@ -122,17 +122,18 @@ export const GlobalStyles = createGlobalStyle`
     font-size: var(--h1-font-size);
     padding-left: 1.25rem;
     margin-bottom: 2.5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 3px;
+      height: 20px;
+      background-color: var(--first-color);
+    }
   }
 
-  .section_title::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 0;
-    width: 3px;
-    height: 20px;
-    background-color: var(--first-color);
-  }
 
   .button {
     display: inline-block;
@@ -142,5 +143,29 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 0.25rem;
     font-size: var(--normal-font-size);
     text-transform: uppercase;
+  }
+
+  @media screen and (min-width: 767px) {
+    .section {
+      padding: 7rem 0 4rem;
+    }
+  }
+
+  @media screen and (min-width: 1072px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section_title {
+      padding-right: 15rem;
+      padding-left: 1.75rem;
+
+      &::before {
+        height: 28px;
+        width: 4px;
+        top: 12px;
+      }
+    }
   }
 `

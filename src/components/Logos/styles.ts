@@ -3,6 +3,17 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.section`
   ${() => css`
     background-color: #fff;
+
+    @media screen and (min-width: 1072px) {
+      ${LogosContainer} {
+        grid-template-columns: repeat(5, 1fr);
+        padding: 3.5rem 0;
+
+        img {
+          width: 110px;
+        }
+      }
+    }
   `}
 `
 

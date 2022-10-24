@@ -29,7 +29,7 @@ const Products = () => {
         <title>Coffee | Products</title>
       </Head>
       <S.Wrapper className="section">
-        <S.ProductsContainer className="container">
+        <div className="container">
           <h2 className="section_title">Choose our delicious and best products</h2>
           <S.ProductsFilters>
             <li
@@ -67,7 +67,7 @@ const Products = () => {
               />
             ))}
           </S.ProductsContentGrid>
-        </S.ProductsContainer>
+        </div>
       </S.Wrapper>
     </>
   )
