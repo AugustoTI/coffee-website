@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { ProductCard } from '../../components/ProductCard'
 import { IProducts, products } from '../../data/products'
 import * as S from '../../styles/products'
@@ -9,6 +10,7 @@ type TypeFilter = 'delicacies' | 'coffee' | 'cake' | null
 const Products = () => {
   const [productsList, setProductsList] = useState<IProducts[]>([])
   const [filterActive, setFilterActive] = useState<TypeFilter>(null)
+  const [parent] = useAutoAnimate<HTMLDivElement>()
 
   const handleFiltered = (category: TypeFilter) => {
     const newProductsList = products.filter(product => product.category === category)
@@ -52,7 +54,7 @@ const Products = () => {
               <span>4 products</span>
             </li>
           </S.ProductsFilters>
-          <S.ProductsContentGrid className="grid">
+          <S.ProductsContentGrid className="grid" ref={parent}>
             {productsList.map(product => (
               <ProductCard
                 key={product.id}

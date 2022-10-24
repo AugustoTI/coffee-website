@@ -1,21 +1,9 @@
-import styled, { css, keyframes } from 'styled-components'
-
-const animeLeft = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: initial
-  }
-`
+import styled, { css } from 'styled-components'
 
 export const Container = styled.article`
   ${() => css`
     background: var(--container-color);
     border-radius: 0.5rem;
-    animation: ${animeLeft} 0.4s forwards;
 
     &:hover ${Shape} img {
       transform: translateY(-0.25rem);
