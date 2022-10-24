@@ -38,6 +38,19 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  ::-webkit-scrollbar{
+    width: 0.6rem;
+    background-color: hsl(206,4%,80%);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: hsl(206,4%,64%);
+
+    &:hover {
+      background-color: hsl(206,4%,48%);
+    }
+  }
+
   * {
     box-sizing: border-box;
     padding: 0;

@@ -74,17 +74,6 @@ export const HeaderNavMenu = styled.div<HeaderNavMenuProps>`
       text-align: center;
     }
 
-    a {
-      text-transform: uppercase;
-      color: var(--text-color-light);
-      font-size: var(--h2-font-size);
-      transition: 0.3s;
-
-      &:hover {
-        color: #fff;
-      }
-    }
-
     @media screen and (max-width: 767px) {
       position: fixed;
       background-color: var(--black-color);

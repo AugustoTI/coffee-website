@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { BiX, BiGridAlt } from 'react-icons/bi'
+import { LinkActive } from '../LinkActive'
 import * as S from './styles'
 
 export const Header = () => {
@@ -43,24 +44,16 @@ export const Header = () => {
         <S.HeaderNavMenu isMenuActive={isMenuActive}>
           <ul>
             <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
+              <LinkActive href="/">Home</LinkActive>
             </li>
             <li>
-              <Link href="/products">
-                <a>Products</a>
-              </Link>
+              <LinkActive href="/products">Products</LinkActive>
             </li>
             <li>
-              <Link href="/premium">
-                <a>Premium</a>
-              </Link>
+              <LinkActive href="/premium">Premium</LinkActive>
             </li>
             <li>
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
+              <LinkActive href="/blog">Blog</LinkActive>
             </li>
           </ul>
 
